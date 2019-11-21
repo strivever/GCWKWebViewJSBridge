@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  iOS native 与 WKWebView深度交互，并提供了js日志输出到xcode控制台;提供JS调用OC；提供OC调用JS；
+OC通过注入变量给JS传参数；OC通过注册JS函数，供JS调用；js给OC传参；通过拦截链接，进行交互，进行了统一封装，统一管理你的拦截回调；
                        DESC
 
   s.homepage         = 'https://github.com/458362366@qq.com/GCWKWebViewJSBridge'
