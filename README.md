@@ -2,7 +2,7 @@
 
 [![CI Status](https://img.shields.io/travis/458362366@qq.com/GCWKWebViewJSBridge.svg?style=flat)](https://travis-ci.org/458362366@qq.com/GCWKWebViewJSBridge)
 [![Version](https://img.shields.io/cocoapods/v/GCWKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/GCWKWebViewJSBridge)
-[![License](https://img.shields.io/cocoapods/l/GCWKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/GCWKWebViewJSBridge)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://cocoapods.org/pods/GCWKWebViewJSBridge)
 [![Platform](https://img.shields.io/cocoapods/p/GCWKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/GCWKWebViewJSBridge)
 
 ## Example
@@ -17,12 +17,12 @@ GCWKWebViewJSBridge is available through [CocoaPods](https://cocoapods.org). To 
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'GCWKWebViewJSBridge'
+pod 'GCWKWebViewJSBridge', '~> 0.1.0'
 ```
 
 ## Author
 
-458362366@qq.com, 458362366@qq.com
+strivever
 
 ## License
 
