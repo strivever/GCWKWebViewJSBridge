@@ -5,6 +5,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://cocoapods.org/pods/GCWKWebViewJSBridge)
 [![Platform](https://img.shields.io/cocoapods/p/GCWKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/GCWKWebViewJSBridge)
 
+## 详情点击 [有啥功能](https://www.jianshu.com/p/a6fcd406bbd5)
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
