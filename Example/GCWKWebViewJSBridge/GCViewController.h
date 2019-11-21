@@ -1,13 +1,15 @@
 //
-//  GCViewController.h
+//  ViewController.h
 //  GCWKWebViewJSBridge
 //
-//  Created by 458362366@qq.com on 11/21/2019.
-//  Copyright (c) 2019 458362366@qq.com. All rights reserved.
+//  Created by StriVever on 2019/11/20.
+//  Copyright © 2019 StriVever. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface GCViewController : UIViewController
 
+
 @end
+

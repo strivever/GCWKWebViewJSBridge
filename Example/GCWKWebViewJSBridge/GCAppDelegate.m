@@ -7,7 +7,6 @@
 //
 
 #import "GCAppDelegate.h"
-
 @implementation GCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

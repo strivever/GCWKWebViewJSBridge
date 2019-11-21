@@ -10,13 +10,14 @@
             background-color: #0071E7;
             border: solid 1px #0071E7;
             border-radius:5px; 
-            font-size: 1em; 
+            font-size: 30px;
             color: white
         }
     .content{
         margin: 20;
         height:250px;
         width:80%;
+        font-size: 30px;
     }
     .aaa{
         height:80px;
@@ -24,23 +25,6 @@
     }
     </style>
     <script type="text/javascript" crossorigin="anonymous">
-        window.onerror = function (msg, url, lineNo, columnNo, error) {
-            var string = msg.toLowerCase();
-            var substring = "script error";
-            if (string.indexOf(substring) > -1){
-                console.log('Script Error: See Browser Console for Detail');
-            } else {
-                var message = [
-                    'Message: ' + msg,
-                    'URL: ' + url,
-                    'Line: ' + lineNo,
-                    'Column: ' + columnNo,
-                    'Error object: ' + JSON.stringify(error)
-                ].join(' - ');
-                console.log(message);
-            }
-            return false;
-        };
         window.onload = function(){
             var a= document.getElementById("content");
             let message = window.getOCMessage();
@@ -54,8 +38,7 @@
         }
         function clickCamera() {
             if (window.webkit) {
-                window.webkit.messageHandlers.ocShare.postMessage(["相机调用","????","??"]);
-                eat();
+               window.webkit.messageHandlers.ocCamera.postMessage("相机调用");
             }else{
                 console.log('失败');
             }
@@ -140,9 +123,9 @@
                 </h1>
                 <div>
                     <a href="http://www.baidu.com" class = "aaa">百度</a>
-                    
+                     <br/>
                     <a href="share:123" class = "aaa">分享</a>
-                    
+                     <br/>
                     <a href="share:12345" class = "aaa">分享1</a>
                 </div>
             </div>

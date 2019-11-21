@@ -1,0 +1,6 @@
+framework module GCWKWebViewJSBridge {
+  umbrella header "GCWKWebViewJSBridge-umbrella.h"
+
+  export *
+  module * { export * }
+}

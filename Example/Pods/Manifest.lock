@@ -1,0 +1,16 @@
+PODS:
+  - GCWKWebViewJSBridge (0.1.0)
+
+DEPENDENCIES:
+  - GCWKWebViewJSBridge (from `../GCWKWebViewJSBridge.podspec`)
+
+EXTERNAL SOURCES:
+  GCWKWebViewJSBridge:
+    :path: "../GCWKWebViewJSBridge.podspec"
+
+SPEC CHECKSUMS:
+  GCWKWebViewJSBridge: 833cd287399a95ebe1310b2b4c14d7cb56185055
+
+PODFILE CHECKSUM: aae491689172793e4eb33640d7f73a9817fcc957
+
+COCOAPODS: 1.8.4

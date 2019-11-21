@@ -1,0 +1,21 @@
+{
+  "name": "GCWKWebViewJSBridge",
+  "version": "0.1.0",
+  "summary": "iOS native 与 WKWebView深度交互，并提供了js日志输出到xcode控制台",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/458362366@qq.com/GCWKWebViewJSBridge",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": "gancaoyisheng",
+  "source": {
+    "git": "https://github.com/strivever/GCWKWebViewJSBridge.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GCWKWebViewJSBridge/Classes/*.{h,m}",
+  "public_header_files": "GCWKWebViewJSBridge/Classes/GCWKWebViewJSBridge.h"
+}

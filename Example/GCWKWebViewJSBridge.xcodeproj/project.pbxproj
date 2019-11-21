@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DB5BB3123865E030087E97F /* GCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB5BB3023865E030087E97F /* GCViewController.m */; };
+		1DB5BB33238660CE0087E97F /* GCTest.html in Resources */ = {isa = PBXBuildFile; fileRef = 1DB5BB32238660CE0087E97F /* GCTest.html */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* GCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* GCAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* GCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* GCViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -39,6 +40,9 @@
 /* Begin PBXFileReference section */
 		06E103280A38E8D8F1D24E29 /* Pods_GCWKWebViewJSBridge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCWKWebViewJSBridge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D743B7E3FC197FEA98AE8D0 /* Pods_GCWKWebViewJSBridge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCWKWebViewJSBridge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DB5BB2F23865E030087E97F /* GCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCViewController.h; sourceTree = "<group>"; };
+		1DB5BB3023865E030087E97F /* GCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCViewController.m; sourceTree = "<group>"; };
+		1DB5BB32238660CE0087E97F /* GCTest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = GCTest.html; sourceTree = "<group>"; };
 		3DA581CCF5405F76A769153B /* Pods-GCWKWebViewJSBridge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCWKWebViewJSBridge_Example.release.xcconfig"; path = "Target Support Files/Pods-GCWKWebViewJSBridge_Example/Pods-GCWKWebViewJSBridge_Example.release.xcconfig"; sourceTree = "<group>"; };
 		47E4443818EE7CB1E739AFB7 /* Pods-GCWKWebViewJSBridge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCWKWebViewJSBridge_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GCWKWebViewJSBridge_Tests/Pods-GCWKWebViewJSBridge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		53B238E9AEFFDDAB36A922D7 /* Pods-GCWKWebViewJSBridge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCWKWebViewJSBridge_Example.debug.xcconfig"; path = "Target Support Files/Pods-GCWKWebViewJSBridge_Example/Pods-GCWKWebViewJSBridge_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -52,8 +56,6 @@
 		6003F59B195388D20070C39A /* GCWKWebViewJSBridge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCWKWebViewJSBridge-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* GCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* GCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* GCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* GCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* GCWKWebViewJSBridge_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCWKWebViewJSBridge_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -61,12 +63,12 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		649E83F758456B92283EF2CD /* GCWKWebViewJSBridge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GCWKWebViewJSBridge.podspec; path = ../GCWKWebViewJSBridge.podspec; sourceTree = "<group>"; };
+		649E83F758456B92283EF2CD /* GCWKWebViewJSBridge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GCWKWebViewJSBridge.podspec; path = ../GCWKWebViewJSBridge.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A873160E8981FD20AA5903EF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A873160E8981FD20AA5903EF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BE89D04BAB3D6517012D5969 /* Pods-GCWKWebViewJSBridge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCWKWebViewJSBridge_Tests.release.xcconfig"; path = "Target Support Files/Pods-GCWKWebViewJSBridge_Tests/Pods-GCWKWebViewJSBridge_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C21E844EE675BC581EF426A7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C21E844EE675BC581EF426A7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,11 +134,11 @@
 		6003F593195388D20070C39A /* Example for GCWKWebViewJSBridge */ = {
 			isa = PBXGroup;
 			children = (
+				1DB5BB2F23865E030087E97F /* GCViewController.h */,
+				1DB5BB3023865E030087E97F /* GCViewController.m */,
 				6003F59C195388D20070C39A /* GCAppDelegate.h */,
 				6003F59D195388D20070C39A /* GCAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* GCViewController.h */,
-				6003F5A6195388D20070C39A /* GCViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -148,6 +150,7 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1DB5BB32238660CE0087E97F /* GCTest.html */,
 				6003F595195388D20070C39A /* GCWKWebViewJSBridge-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -193,7 +196,6 @@
 				47E4443818EE7CB1E739AFB7 /* Pods-GCWKWebViewJSBridge_Tests.debug.xcconfig */,
 				BE89D04BAB3D6517012D5969 /* Pods-GCWKWebViewJSBridge_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -280,6 +283,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				1DB5BB33238660CE0087E97F /* GCTest.html in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,8 +368,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DB5BB3123865E030087E97F /* GCViewController.m in Sources */,
 				6003F59E195388D20070C39A /* GCAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* GCViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
