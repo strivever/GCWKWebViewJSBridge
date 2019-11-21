@@ -13,19 +13,32 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+#### CocoaPods
 GCWKWebViewJSBridge is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
-
+```
+Add pod 'GCWKWebViewJSBridge' to your Podfile.
+Run pod install or pod update.
+Import <GCWKWebViewJSBridge/GCWKWebViewJSBridge.h>.
+```
 ```ruby
 pod 'GCWKWebViewJSBridge', '~> 0.1.0'
 ```
+#### Manually
+
+* Download all the files in the GCWKWebViewJSBridge subdirectory.
+* Add the source files to your Xcode project.
+* Import GCWKWebViewJSBridge.h
 
 ## Author
 strivever
 ## Description
-WKWebView深度交互，并提供了js日志输出到xcode控制台;提供JS调用OC；提供OC调用JS；
-OC通过注入变量给JS传参数；OC通过注册JS函数，供JS调用；js给OC传参；通过拦截链接，进行交互，进行了统一封装，统一管理你的拦截回调；
-## use 
+1.WKWebView深度交互，并提供了js日志输出到xcode控制台;
+2.提供JS调用OC；提供OC调用JS；
+3.OC通过注入变量给JS传参数；
+4.OC通过注册JS函数，供JS调用；
+5.js给OC传参；通过拦截链接，进行交互，进行了统一封装，统一管理你的拦截回调；
+## usage 
 ```
     //注册xcode控制台 输出web控制台信息
     [bridge registCaptureJSConsoleLog];
