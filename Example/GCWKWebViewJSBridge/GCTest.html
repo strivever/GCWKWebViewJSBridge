@@ -1,0 +1,151 @@
+<html>
+    <head Access-Control-Allow-Origin> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <style type="text/css">
+        #button{
+            height:80px;
+            width:80%;
+            margin: 20;
+            padding: 0px 30px;
+            background-color: #0071E7;
+            border: solid 1px #0071E7;
+            border-radius:5px; 
+            font-size: 1em; 
+            color: white
+        }
+    .content{
+        margin: 20;
+        height:250px;
+        width:80%;
+    }
+    .aaa{
+        height:80px;
+        width:80%;
+    }
+    </style>
+    <script type="text/javascript" crossorigin="anonymous">
+        window.onerror = function (msg, url, lineNo, columnNo, error) {
+            var string = msg.toLowerCase();
+            var substring = "script error";
+            if (string.indexOf(substring) > -1){
+                console.log('Script Error: See Browser Console for Detail');
+            } else {
+                var message = [
+                    'Message: ' + msg,
+                    'URL: ' + url,
+                    'Line: ' + lineNo,
+                    'Column: ' + columnNo,
+                    'Error object: ' + JSON.stringify(error)
+                ].join(' - ');
+                console.log(message);
+            }
+            return false;
+        };
+        window.onload = function(){
+            var a= document.getElementById("content");
+            let message = window.getOCMessage();
+            if (message instanceof Array){
+                 a.innerHTML = message[0];
+            }else if (message instanceof String){
+                 a.innerHTML = message;
+            }else if (message instanceof Object){
+                 a.innerHTML = message["name"];
+            }
+        }
+        function clickCamera() {
+            if (window.webkit) {
+                window.webkit.messageHandlers.ocShare.postMessage(["相机调用","????","??"]);
+                eat();
+            }else{
+                console.log('失败');
+            }
+        }
+        function userInfo() {
+            if (window.webkit) {
+                window.webkit.messageHandlers.getUserJson.postMessage({"id":"10086","name":"老司机","age":"18"});
+            }else{
+                console.log('失败');
+            }
+        }
+        function share(param){
+            if (window.webkit) {
+                window.webkit.messageHandlers.ocShare.postMessage("分享我呗")
+            }else{
+                console.log(param);
+            }
+            
+        }
+        function textAreaShowText (){
+            var a=document.getElementById("content1");
+            if (window.uoloadUser instanceof Array){
+                 a.innerHTML = window.uoloadUser[0];
+            }else if (window.uoloadUser instanceof String){
+                 a.innerHTML = window.uoloadUser;
+            }else if (window.uoloadUser instanceof Object){
+                 a.innerHTML = window.uoloadUser["name"];
+            }
+        }
+       function clickLog(param){
+           console.log(param);
+       }
+    
+    function ocCallJS(param){
+        console.log(param);
+    }
+    function ocCallJS1(name,age,gender,uid){
+        console.log(name+age+gender+uid);
+    }
+    </script>
+    </head>
+
+    <body>
+        <div>
+            <div>
+                <h1>
+                    JS调用App端
+                </h1>
+            </div>
+            <div>
+                <button id="button" onclick="clickCamera()">
+                    点击相机
+                </button>
+                <button id="button" onclick="userInfo()">
+                   给App传json
+                </button>
+                <button id="button" onclick="share('分享的参数')">
+                    分享一下
+                </button>
+                <button id="button" onclick="clickLog('控制台log你收到了吧')">
+                    控制台输出log
+                </button>
+            </div>
+            
+            <div>
+                <h1>
+                     oc向js注入信息
+                </h1>
+                <div>
+                    <textarea style="font-size: 30" class = "content" id="content">
+                        
+                    </textarea>
+                    <textarea style="font-size: 30" class = "content" id="content1">
+                        
+                    </textarea>
+                    <button id="button" onclick="textAreaShowText()">
+                        获取文本框信息
+                    </button>
+                </div>
+                <h1>
+                     URL拦截
+                </h1>
+                <div>
+                    <a href="http://www.baidu.com" class = "aaa">百度</a>
+                    
+                    <a href="share:123" class = "aaa">分享</a>
+                    
+                    <a href="share:12345" class = "aaa">分享1</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
