@@ -1,6 +1,6 @@
 # GCWKWebViewJSBridge
 
-[![CI Status](https://img.shields.io/travis/458362366@qq.com/GCWKWebViewJSBridge.svg?style=flat)](https://travis-ci.org/458362366@qq.com/GCWKWebViewJSBridge)
+[![CI Status](https://img.shields.io/badge/build-pass-brightgreen)](https://travis-ci.org/458362366@qq.com/GCWKWebViewJSBridge)
 [![Version](https://img.shields.io/cocoapods/v/GCWKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/GCWKWebViewJSBridge)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://cocoapods.org/pods/GCWKWebViewJSBridge)
 [![Platform](https://img.shields.io/cocoapods/p/GCWKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/GCWKWebViewJSBridge)
