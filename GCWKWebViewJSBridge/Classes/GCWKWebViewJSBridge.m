@@ -20,8 +20,7 @@
 @end
 @implementation GCWKWebViewJSBridge
 - (void)dealloc{
-    [self removeAllUserScripts];
-    [self removeAllScriptMessageHandler];
+    [self clearAll];
 }
 #pragma mark --- public
 + (instancetype)bridgeWithWKWebView:(WKWebView *)webView{
@@ -38,6 +37,7 @@
 - (void)removeScriptMessageHandlerForName:(NSString *)method{
     @try {
         [self.webView.configuration.userContentController removeScriptMessageHandlerForName:method];
+        [self.jsHandlerDict removeObjectForKey:method];
     } @catch (NSException *exception) {
         
     } @finally {
@@ -46,11 +46,28 @@
 }
 - (void)removeAllScriptMessageHandler{
     for (NSString * method in self.jsHandlerDict.allKeys) {
-        [self.webView.configuration.userContentController removeScriptMessageHandlerForName:method];
+        [self removeScriptMessageHandlerForName:method];
     }
+    [self.jsHandlerDict removeAllObjects];
+}
+- (void)clearAll{
+    [self removeAllUserScripts];
+    [self removeAllScriptMessageHandler];
+    [self.interceptURLHandlerDict removeAllObjects];
+}
+- (NSString *)desciptionUserJScripts{
+    NSString * description = @"已注入JS脚本:===================\n";
+    for (WKUserScript * script in [self allUserScripts]) {
+        description = [description stringByAppendingString:script.source];
+        description = [description stringByAppendingString:@"\n\n"];
+    }
+    description = [description stringByAppendingString:@"\n==================="];
+    return description;
+}
+- (NSArray *)allUserScripts{
+    return self.webView.configuration.userContentController.userScripts.copy;
 }
 #pragma mark --- 捕获js控住台log
-
 - (void)registCaptureJSConsoleLog{
 #if defined(DEBUG) && DEBUG == 1
     NSString *jsCode = @"console.log = (function(consoleLog){\
@@ -179,7 +196,7 @@
 - (void)registJSMethod:(NSString *)jsMethod nativeHandler:(handler)nativehandler{
     if (jsMethod && nativehandler) {
         if (self.jsHandlerDict[jsMethod]) {
-            return;
+            [self removeScriptMessageHandlerForName:jsMethod];
         }
         [self.jsHandlerDict setObject:[nativehandler copy] forKey:jsMethod];
         [self.webView.configuration.userContentController addScriptMessageHandler:self name:jsMethod];
@@ -194,6 +211,7 @@
 - (void)registNativeUserScript:(NSString *)jsCode inTime:(WKUserScriptInjectionTime)userScriptInjectionTime{
     WKUserScript *script = [[WKUserScript alloc] initWithSource:jsCode injectionTime:(userScriptInjectionTime) forMainFrameOnly:YES];
     NSAssert(self.webView != nil, @"请设置jsBridge webview");
+    
     [self.webView.configuration.userContentController addUserScript:script];
 }
 #pragma mark --- native call js

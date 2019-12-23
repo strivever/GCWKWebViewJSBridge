@@ -21,8 +21,6 @@ typedef void(^handler)(NSString *messageName,id messageBody);
 - (void)registInterceptURLKeys:(NSArray *)keyUrls handler:(interceptURLHandler)handler;
 - (void)registInterceptURLKey:(NSString *)keyURL handler:(interceptURLHandler)handler;
 - (BOOL)webViewBridgeCanInterceptURL:(NSString *)URL;
-
-/// native向H5注入js脚本
 /// @param jsCode js代码以字符串形式
 /// @param userScriptInjectionTime 注入时机
 - (void)registNativeUserScript:(NSString *)jsCode inTime:(WKUserScriptInjectionTime)userScriptInjectionTime;
@@ -51,6 +49,7 @@ typedef void(^handler)(NSString *messageName,id messageBody);
 /**
  前端用法
  window.webkit.messageHandlers.【jsMethod】.postMessage(【需要传给native的参数】)
+ ,支持重复注入相同js method，覆盖旧的。
  */
 - (void)registJSMethod:(NSString *)jsMethod nativeHandler:(handler)nativehandler;
 /// 批量注册
@@ -74,9 +73,14 @@ native 调用JS函数
 实现 相应的method
 */
 - (void)nativeCallJSMethod:(NSString *)methodName completionHandler:(void (^)(id _Nullable result, NSError * _Nullable))completionHandler arguments:(NSString *)param, ...;
-
+///移除所有注入脚本
 - (void)removeAllUserScripts;
 - (void)removeScriptMessageHandlerForName:(NSString *)method;
+
+/// 查看注入的所有js脚本，用于debug
+- (NSString *)desciptionUserJScripts;
+///清除所有注入JS脚本，注入回调
+- (void)clearAll;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -26,6 +26,7 @@
     NSString * bundleStr = [[NSBundle mainBundle] pathForResource:@"GCTest" ofType:@"html"];
         
     NSURL * htmlURL = [NSURL fileURLWithPath:bundleStr];
+//    htmlURL = [NSURL URLWithString:@"https://www.jianshu.com/"];
     [webView loadRequest:[NSURLRequest requestWithURL:htmlURL]];
     [self.view addSubview:webView];
     
@@ -45,7 +46,9 @@
     //oc向JS注入实例变量，可用来向h5注入用户token，信息等等
     NSDictionary * userInfo = @{@"uid":@"10086",@"name":@"中国移动",@"age":@"22",@"token":@"oidahnfjabfiabfuaojfbaiufbafo"};
     [bridge nativeUploadJSArguments:userInfo filedName:@"uoloadUser" inTime:WKUserScriptInjectionTimeAtDocumentStart];
-   
+   //oc向JS注入实例变量，可用来向h5注入用户token，信息等等
+   NSDictionary * userInfo1 = @{@"uid":@"10086111111",@"name":@"中国移动233",@"age":@"22",@"token":@"oidahnfjabfiabfuaojfbaiufbafo"};
+   [bridge nativeUploadJSArguments:userInfo1 filedName:@"uoloadUser" inTime:WKUserScriptInjectionTimeAtDocumentStart];
     //oc向JS注入参数，可用来向h5注入一个带参数返回值的函数，供h5调用
     NSArray * lists = @[@"周1",@"周2",@"周3",@"周4"];
     [bridge nativeUploadJSArguments:lists useMethod:@"getOCMessage" inTime:WKUserScriptInjectionTimeAtDocumentStart];
