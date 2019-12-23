@@ -21,18 +21,18 @@ typedef void(^handler)(NSString *messageName,id messageBody);
 - (void)registInterceptURLKeys:(NSArray *)keyUrls handler:(interceptURLHandler)handler;
 - (void)registInterceptURLKey:(NSString *)keyURL handler:(interceptURLHandler)handler;
 - (BOOL)webViewBridgeCanInterceptURL:(NSString *)URL;
-/// @param jsCode js代码以字符串形式
+/// @param jsCode js代码以字符串形式，注意重复注册 注入前可以统一 调用removeAllUserScripts
 /// @param userScriptInjectionTime 注入时机
 - (void)registNativeUserScript:(NSString *)jsCode inTime:(WKUserScriptInjectionTime)userScriptInjectionTime;
 
-/// 向JS注入一个全局变量，供JS使用
+/// 向JS注入一个全局变量，供JS使用 注意重复注册 注入前可以统一 调用removeAllUserScript
 /// @param param  变量值,可以是字符串，或者JSON对象
 /// @param filedName 变量名称
 /// @param userScriptInjectionTime 注入时机
 /// 前端使用：取值即可
 - (void)nativeUploadJSArguments:(id)param filedName:(NSString *)filedName inTime:(WKUserScriptInjectionTime)userScriptInjectionTime;
 
-/// 向JS注入带返回值得函数，供JS获取native信息
+/// 向JS注入带返回值得函数，供JS获取native信息 注意重复注册 注入前可以统一 调用removeAllUserScript
 /// @param param 变量值 可以是字符串，或者JSON对象
 /// @param methodName  js调用函数名
 /// @param userScriptInjectionTime js注入时机
@@ -43,13 +43,13 @@ typedef void(^handler)(NSString *messageName,id messageBody);
  */
 - (void)nativeUploadJSArguments:(id)param useMethod:(NSString *)methodName inTime:(WKUserScriptInjectionTime)userScriptInjectionTime;
 
-/// JS调用native
+/// JS调用native 支持重复注入相同js method，覆盖旧的。
 /// @param jsMethod js函数名称
 /// @param nativehandler native响应的回调
 /**
  前端用法
  window.webkit.messageHandlers.【jsMethod】.postMessage(【需要传给native的参数】)
- ,支持重复注入相同js method，覆盖旧的。
+ ,
  */
 - (void)registJSMethod:(NSString *)jsMethod nativeHandler:(handler)nativehandler;
 /// 批量注册

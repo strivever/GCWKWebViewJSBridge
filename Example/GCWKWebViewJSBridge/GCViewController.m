@@ -61,7 +61,12 @@
     [bridge registInterceptURLKeys:@[@"share:123",@"share:12345",@"share://info#"] handler:^(NSString * _Nonnull keyURL, NSString * _Nonnull URL) {
         NSLog(@"%@====\n%@",keyURL,URL);
     }];
-    
+    [bridge registJSMethod:@"ocCamera" nativeHandler:^(NSString * _Nonnull messageName, id  _Nonnull messageBody) {
+        
+    }];
+    [bridge registJSMethod:@"ocCamera" nativeHandler:^(NSString * _Nonnull messageName, id  _Nonnull messageBody) {
+        
+    }];
     UIButton  * btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn1 setTitle:@"App调用JS1" forState:UIControlStateNormal];
     [btn1 addTarget:self action:@selector(callJS:) forControlEvents:UIControlEventTouchUpInside];
@@ -77,6 +82,7 @@
     [btn2 sizeToFit];
     btn2.backgroundColor = [UIColor redColor];
     [self.view addSubview:btn2];
+    [bridge desciptionUserJScripts];
 }
 #pragma mark ---WKNavigationDelegate
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{

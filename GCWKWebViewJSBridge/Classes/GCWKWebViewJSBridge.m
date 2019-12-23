@@ -33,6 +33,8 @@
 }
 - (void)removeAllUserScripts{
     [self.webView.configuration.userContentController removeAllUserScripts];
+    [self registCaptureJSConsoleLog];
+    [self registCaptureJSExceptionLog];
 }
 - (void)removeScriptMessageHandlerForName:(NSString *)method{
     @try {
@@ -56,12 +58,15 @@
     [self.interceptURLHandlerDict removeAllObjects];
 }
 - (NSString *)desciptionUserJScripts{
-    NSString * description = @"已注入JS脚本:===================\n";
+    NSString * description = @"已注入JS脚本:===================\n\n\n";
     for (WKUserScript * script in [self allUserScripts]) {
         description = [description stringByAppendingString:script.source];
         description = [description stringByAppendingString:@"\n\n"];
     }
-    description = [description stringByAppendingString:@"\n==================="];
+    description = [description stringByAppendingString:@"\n===================end\n\n\n"];
+#if defined(DEBUG) && DEBUG == 1
+    NSLog(@"%@",description);
+#endif
     return description;
 }
 - (NSArray *)allUserScripts{
