@@ -23,7 +23,7 @@ Run pod install or pod update.
 Import <GCWKWebViewJSBridge/GCWKWebViewJSBridge.h>.
 ```
 ```ruby
-pod 'GCWKWebViewJSBridge', '~> 0.1.0'
+pod 'GCWKWebViewJSBridge', '~> 0.1.1'
 ```
 #### Manually
 
